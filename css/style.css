@@ -1,0 +1,9 @@
+.wapper {
+    padding-top: 100px;
+}
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+    .wapper {
+        padding-top: 10px;
+    }
+}
