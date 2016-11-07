@@ -7,3 +7,103 @@
         padding-top: 10px;
     }
 }
+
+.enable {
+    -ms-user-select: all;
+    -moz-user-select: all;
+    -webkit-user-select: all;
+    user-select: all;
+}
+
+.form-validate .ng-invalid.ng-dirty {
+    border: 1px solid lightpink;
+    -webkit-box-shadow: inset 0 1px 1px lightpink;
+    box-shadow: inset 0 1px 1px lightpink;
+}
+.form-validate .ng-valid.ng-dirty {
+    border: 1px solid lightgreen;
+    -webkit-box-shadow: inset 0 1px 1px lightgreen;
+    box-shadow: inset 0 1px 1px lightgreen;
+}
+
+/* $preloader
+ ------------------------------------------*/
+@-webkit-keyframes loading-bar {
+    0% {
+        width: 0;
+    }
+    33% {
+        width: 100%;
+    }
+    66% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        width: 100%;
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -o-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -o-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+    }
+}
+@keyframes loading-bar {
+    0% {
+        width: 0;
+    }
+    33% {
+        width: 100%;
+    }
+    66% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        width: 100%;
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -o-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+    }
+    100% {
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+        -webkit-transform-origin: right;
+        -moz-transform-origin: right;
+        -o-transform-origin: right;
+        -ms-transform-origin: right;
+        transform-origin: right;
+    }
+}
+.preloader {
+    position: fixed;
+    width: 100%;
+    overflow: hidden;
+    top: 0px;
+    z-index: 100;
+    height: 3px;
+    background: rgba(254, 124, 192, 0.2);
+}
+.preloader::before {
+    content: '';
+    background: rgb(254, 124, 192);
+    display: block;
+    width: 100%;
+    height: 100%;
+    -webkit-animation: loading-bar 1.5s infinite;
+    animation: loading-bar 1.5s infinite;
+    -webkit-transition-delay: 400ms;
+    -moz-transition-delay: 400ms;
+    -o-transition-delay: 400ms;
+    transition-delay: 400ms;
+}
+footer {
+    height: 100px;
+}
