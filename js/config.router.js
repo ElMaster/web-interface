@@ -19,9 +19,9 @@ angular
             }
         };
     })
-    .config(['$stateProvider', '$urlRouterProvider',
-        function ($stateProvider, $urlRouterProvider) {
-
+    .config(['$stateProvider', '$urlRouterProvider','$httpProvider',
+        function ($stateProvider, $urlRouterProvider,$httpProvider) {
+            $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
             $urlRouterProvider.otherwise('/');
 
             $stateProvider

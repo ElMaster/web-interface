@@ -1,6 +1,76 @@
 
+<div class="ui segment __mobile-segment">
 
-<div class="ui ignored info message">
-    <p ng-if="recvetTrue"><strong>Add Url:</strong> <span class="enable">https://itunes.apple.com/ru/app/hotels.com/id284971959?mt=8</span></p>
-    {{appstoreResponse}}
+    <p ng-if="recvetTrue && !errorMessage"><strong>Add Url:</strong> <span class="enable">https://itunes.apple.com/ru/app/desevye-aviabilety-i-poisk/id606870241?mt=8</span></p>
+    <div class="ui ignored info message" ng-if="errorMessage">Неверный URL или нету такого языка</div>
+
+    <div class="ui card __card-content" ng-if="!recvetTrue">
+
+        <div class="content">
+            <img class="left floated tiny ui image" ng-src="{{appstoreResponse.artworkUrl100}}">
+            <div class="header">
+                <div class="ui basic label right floated" ng-bind="appstoreResponse.trackContentRating"></div>
+                <h3 class="resizeText" >{{appstoreResponse.trackName}}</h3>
+
+            </div>
+            <div class="meta">
+                <p ng-bind="appstoreResponse.sellerName"></p>
+            </div>
+            <div class="extra">
+                <p>Включает встроенные покупки</p>
+            </div>
+
+
+            <a target="_blank" href="{{appstoreResponse.trackViewUrl}}" class="ui inverted blue button right floated"><i class="plus icon "></i>ЗАГРУЗИТЬ</a>
+
+
+        </div>
+        <div class="extra content" id="__mobile-tab">
+            <div class="ui three buttons">
+                <a class="ui grey button tabs1" style="padding-left: 5px;">Подробнее</a>
+                <a class="ui grey basic button tabs2">Отзывы</a>
+                <a class="ui grey basic button tabs3">Похожие</a>
+            </div>
+
+
+
+        </div>
+
+        <div class="content">
+            <div class="ui active tab" data-tab="tabs1">
+                <div class="flexslider" ng-if="!loaderSlider">
+                    <ul class="slides">
+                        <li ng-repeat="scrins in appstoreResponse.screenshotUrls">
+                            <div class="ui ignored info message __loaderSliderImg">
+                                <img ng-src="{{scrins}}" />
+                            </div>
+
+                        </li>
+                    </ul>
+                </div>
+
+                <h4 class="ui header">Описание</h4>
+                <p>{{appstoreResponse.description}}</p>
+            </div>
+            <div class="ui tab" data-tab="tabs2">
+                <h4 class="ui header">Отзывы</h4>
+            </div>
+            <div class="ui tab" data-tab="tabs3">
+                <h4 class="ui header">Описание</h4>
+            </div>
+        </div>
+    </div>
+    <div ng-if="loaderSlider"  class="ui active inverted dimmer">
+        <div class="ui text loader">Loading</div>
+    </div>
+
+
 </div>
+
+
+<script>
+
+
+
+
+</script>

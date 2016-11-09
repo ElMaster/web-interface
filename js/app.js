@@ -12,5 +12,4 @@ angular
     .module('interfaceApp', [
         'ui.router',
         'ngAnimate'
-        
     ]);

@@ -107,3 +107,46 @@
 footer {
     height: 100px;
 }
+
+
+
+
+
+.__mobile-segment .__card-content {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+}
+.__card-content h3 {
+    margin: 0 0 3px 0!important;
+}
+.__card-content .content .meta p {
+    color: #3c3c3c;
+    font-size: 16px;
+    margin-bottom: 3px!important;
+}
+.__card-content .content .extra p {
+    color: #a9a9a9;
+    margin-bottom: 5px!important;
+}
+.__mobile-segment .button {
+    position: relative;
+}
+.__mobile-segment .plus {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    width: 5px;
+    font-size: 10px;
+}
+.ui.message.__loaderSliderImg {
+    padding: 5px;
+}
+.flex-direction-nav a:before, .flex-direction-nav a:before {
+    line-height: 1!important;
+}
+.resizeText {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
